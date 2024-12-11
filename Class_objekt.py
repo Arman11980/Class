@@ -4,14 +4,12 @@ class House:
         self.number_of_floors = number_of_floors
 
     def go_to(self,new_floor):
-        print(self.name)
-        for i in range(1,new_floor +1):
+       if new_floor > self.number_of_floors or new_floor < 1:
+            print("Такого этажа не существует")
 
-            if i > self.number_of_floors:
-                print('Такого этажа не существует')
-                break
-            else:
-                print(i)
+        else:
+            for floor in range(1, new_floor + 1):
+                print(floor)
 h1 = House('ЖК Горький', 18)
 h2 = House('Домик в деревне', 2)
 h1.go_to(5)
